@@ -1,14 +1,18 @@
 import './App.css';
 import Logo from './components/Logo/Logo.js';
+import SearchBar from './components/SearchBar/SearchBar.js';
 
 function App() {
   return (
-    <header>
-      <div>
+    <div>
+      <header>
         <Logo />
-        <p>Основной контент</p>
-      </div>
-    </header>
+      </header>
+
+      <body>
+        <SearchBar />
+      </body>
+    </div>
   );
 }
 
