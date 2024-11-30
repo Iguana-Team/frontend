@@ -1,0 +1,38 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Иван",
+      "lastName": "Иванов",
+      "photo": "https://via.placeholder.com/150",
+      "department1": "Разработка",
+      "functionalBlock": "Блок 1",
+      "department2": "Отдел 2",
+      "department3": "Отдел 3",
+      "department4": "Отдел 4",
+      "position": "Разработчик",
+      "role": "Технический специалист",
+      "phone": "+7 123 456 7890",
+      "city": "Санкт-Петербург",
+      "address": "Улица Пушкина, д. 10",
+      "email": "ivanov@example.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Мария",
+      "lastName": "Петрова",
+      "photo": "https://via.placeholder.com/150",
+      "department1": "Маркетинг",
+      "functionalBlock": "Блок 2",
+      "department2": "Отдел 1",
+      "department3": "Отдел 4",
+      "department4": "Отдел 5",
+      "position": "Менеджер",
+      "role": "Управление проектами",
+      "phone": "+7 987 654 3210",
+      "city": "Москва",
+      "address": "Красная площадь, д. 1",
+      "email": "petrova@example.com"
+    }
+  ]
+}
