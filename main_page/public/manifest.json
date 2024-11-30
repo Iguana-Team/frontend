@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "MTSLink",
+  "name": "Web app for searching employees in MTSLink",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "/public/pictures/logo/MTS_icon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
