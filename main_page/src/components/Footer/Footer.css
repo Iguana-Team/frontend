@@ -1,6 +1,6 @@
 .footer {
   background-color: #f8f8f8;
-  padding: 5px 0;
+  padding: 1px 0;
   font-size: 14px;
   color: #555;
   border-top: 1px solid #ddd;
@@ -8,7 +8,7 @@
 
 .footer-content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,8 +16,16 @@
 
 .footer-column {
   flex: 1;
-  text-align: left;
+  text-align: center;
   padding: 0 10px;
+}
+
+.footer-column.left {
+  text-align: left; 
+}
+
+.footer-column.right {
+  text-align: right; 
 }
 
 .footer-center {
@@ -37,16 +45,20 @@
 }
 
 .footer-logo img#itmo {
-  width: 25%;
+  width: 35%;
   margin-right: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-logo object#polytech {
-  width: 30%;
+  width: 42.5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-nav {
-  text-align: right;
   margin-top: 10px;
 }
 
