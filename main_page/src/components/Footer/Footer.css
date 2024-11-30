@@ -46,8 +46,6 @@
 
 .footer-logo img#itmo {
   width: 35%;
-  margin-right: 10px;
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -71,4 +69,46 @@
 
 .footer-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .footer-logo img#itmo {
+    width: 50%;
+  }
+
+  .footer-logo object#polytech {
+    width: 50%;
+  }
+
+  .footer-nav {
+    margin-top: 20px;
+  }
+
+  .footer-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo img#itmo {
+    width: 40%;
+  }
+
+  .footer-logo object#polytech {
+    width: 40%;
+  }
+
+  .footer-link {
+    font-size: 10px;
+  }
 }
