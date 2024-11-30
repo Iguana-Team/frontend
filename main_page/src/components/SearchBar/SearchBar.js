@@ -34,7 +34,7 @@ function SearchBar() {
   }, [query]);
 
   return (
-    <div>
+    <div className="search-bar">
       <input
         type="text"
         placeholder="Введите запрос..."

@@ -1,16 +1,20 @@
 import './App.css';
-import Logo from './components/Logo/Logo.js';
+import Header from './components/Header/Header.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
-import Footer from './components/Footer/Footer.js'
+import Footer from './components/Footer/Footer.js';
 
 function App() {
   return (
-    <div>
-        <Logo />
+    <div className="app-wrapper">
+      <header>
+        <div>
+          <Header />
+        </div>
+      </header>
+      <main className="main-content">
         <SearchBar />
-        <h1>Header number 1</h1>
-        <p>Some text</p>
-        <Footer />
+      </main>
+      <Footer />
     </div>
   );
 }
