@@ -33,6 +33,40 @@
       "city": "Москва",
       "address": "Красная площадь, д. 1",
       "email": "petrova@example.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Мария",
+      "lastName": "Соскова",
+      "photo": "https://via.placeholder.com/150",
+      "department1": "Маркетинг",
+      "functionalBlock": "Блок 52",
+      "department2": "Отдел 1",
+      "department3": "Отдел 4",
+      "department4": "Отдел 5",
+      "position": "Менеджер",
+      "role": "Управление проектами",
+      "phone": "+7 987 654 3210",
+      "city": "Москва",
+      "address": "Красная площадь, д. 1",
+      "email": "soskova@example.com"
+    },
+    {
+      "id": 4,
+      "firstName": "Мария",
+      "lastName": "Вагинкова",
+      "photo": "https://via.placeholder.com/150",
+      "department1": "Маркетинг",
+      "functionalBlock": "Блок 52",
+      "department2": "Отдел 1",
+      "department3": "Отдел 4",
+      "department4": "Отдел 5",
+      "position": "Менеджер",
+      "role": "Управление проектами",
+      "phone": "+7 987 654 3210",
+      "city": "Москва",
+      "address": "Красная площадь, д. 1",
+      "email": "soskova@example.com"
     }
   ]
 }

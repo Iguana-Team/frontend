@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import EmployeeCard from "../Employee/EmployeeCard";
 import './SearchBar.css';
 
 function SearchBar() {
     const [query, setQuery] = useState("");
-    const [result, setResult] = useState(null);
+    const [result, setResult] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const navigate = useNavigate();
+    const [openedEmployeeId, setOpenedEmployeeId] = useState(null);
 
     const fetchData = async () => {
         if (query.trim() === "") {
             setError("Введите имя для поиска");
-            setResult(null);
+            setResult([]);
             return;
         }
 
@@ -20,7 +20,7 @@ function SearchBar() {
         setError(null);
 
         try {
-            const response = await fetch(`http://localhost:3000/employees?firstName_like=${query}`);
+            const response = await fetch(`http://localhost:3000/employees?firstName=${query}`);
             if (!response.ok) {
                 throw new Error("Не удалось получить данные");
             }
@@ -44,7 +44,11 @@ function SearchBar() {
     };
 
     const handleEmployeeClick = (id) => {
-        navigate(`/employee/${id}`);
+        if (openedEmployeeId === id) {
+            setOpenedEmployeeId(null);
+        } else {
+            setOpenedEmployeeId(id);
+        }
     };
 
     return (
@@ -74,15 +78,27 @@ function SearchBar() {
                 <p>Загрузка...</p>
             ) : error ? (
                 <p style={{ color: "red" }}>{error}</p>
-            ) : result ? (
-                <div>
+            ) : result.length > 0 ? (
+                <div className="employee-list">
                     {result.map((employee) => (
-                        <div
-                            key={employee.id}
-                            onClick={() => handleEmployeeClick(employee.id)}
-                            style={{ cursor: "pointer", margin: "10px 0", padding: "5px", backgroundColor: "#f0f0f0" }}
-                        >
-                            {employee.firstName} {employee.lastName}
+                        <div key={employee.id} className="employee-item">
+                            <div
+                                onClick={() => handleEmployeeClick(employee.id)}
+                                style={{
+                                    cursor: "pointer",
+                                    margin: "10px 0",
+                                    padding: "5px",
+                                    backgroundColor: "#f0f0f0",
+                                    borderRadius: "4px",
+                                }}
+                            >
+                                {employee.firstName} {employee.lastName}
+                            </div>
+                            {openedEmployeeId === employee.id && (
+                                <div className="employee-card-container">
+                                    <EmployeeCard employee={employee}/> {/* Карточка сотрудника */}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
