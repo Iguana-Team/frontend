@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 125px
+}
+
+object {
+    width: 12%;
+  }
+
+@media (max-width: 768px) {
+    .header object {
+        width: 20%;
+    }
+
+    .header img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header object {
+        width: 25%;
+    }
+
+    .header img {
+        width: 80px;
+    }
+}

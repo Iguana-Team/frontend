@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+  }
+
+  h1, h2, h3 {
+    font-family: 'MTSTextBlack';
+  }
+  
+  p {
+    font-family: 'MTSTextRegular';
+  }
+
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+  
+
+  .main-content {
+    flex: 1; 
+    padding: 20px;
+  }
+  
+
+  footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+  }
+
+  @font-face {
+    font-family: 'MTSTextRegular';
+    src: url('./assets/MTSText-Regular/MTSText-Regular.eot');
+    src:
+         url('./assets/MTSText-Regular/MTSText-Regular.eot?#iefix') format('embedded-opentype'),
+         url('./assets/MTSText-Regular/MTSText-Regular.woff2') format('woff2'),
+         url('./assets/MTSText-Regular/MTSText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'MTSTextBold';
+    src: url('./assets/MTSText-Bold/MTSText-Bold.eot');
+    src:
+         url('./assets/MTSText-Bold/MTSText-Bold.eot?#iefix') format('embedded-opentype'),
+         url('./assets/MTSText-Bold/MTSText-Bold.woff2') format('woff2'),
+         url('./assets/MTSText-Bold/MTSText-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'MTSTextBlack';
+    src: url('./assets/MTSText-Black/MTSText-Black.eot');
+    src:
+         url('./assets/MTSText-Black/MTSText-Black.eot?#iefix') format('embedded-opentype'),
+         url('./assets/MTSText-Black/MTSText-Black.woff2') format('woff2'),
+         url('./assets/MTSText-Black/MTSText-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
