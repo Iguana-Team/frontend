@@ -1,63 +1,81 @@
-import React, { useState, useEffect } from "react";
-import './SearchBar.css'
+import React, { useState } from "react";
+import './SearchBar.css';
 
 function SearchBar() {
   const [query, setQuery] = useState(""); 
-  const [results, setResults] = useState([]); 
-  const [loading, setLoading] = useState(false); 
+  const [result, setResult] = useState(null); 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  useEffect(() => {
+  const fetchData = async () => {
     if (query.trim() === "") {
-      setResults([]); 
+      setError("Введите имя для поиска");
+      setResult(null);
       return;
     }
 
-    setLoading(true); 
-    const timeoutId = setTimeout(() => {
-      const fakeData = [
-        "Apple",
-        "Banana",
-        "Cherry",
-        "Date",
-        "Elderberry",
-        "Fig",
-        "Grape",
-      ];
-      const filteredData = fakeData.filter((item) =>
-        item.toLowerCase().includes(query.toLowerCase())
-      );
-      setResults(filteredData); 
-      setLoading(false); 
-    }, 500); 
+    setLoading(true);
+    setError(null);
 
-    return () => clearTimeout(timeoutId); 
-  }, [query]);
+    try {
+      const response = await fetch('http://localhost:3000');
+      if (!response.ok) {
+        throw new Error("Не удалось получить данные");
+      }
+      const data = await response.json();
+      setResult(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      fetchData(); 
+    }
+  };
 
   return (
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Введите запрос..."
+        placeholder="Введите имя..."
         value={query}
-        onChange={(e) => setQuery(e.target.value)} 
-        style={{
-          padding: "8px",
-          width: "300px",
-          fontSize: "16px",
-          marginBottom: "10px",
-        }}
+        onChange={handleInputChange}
+        onKeyDown={handleKeyDown}
       />
+      <button
+        onClick={fetchData}
+        style={{
+          padding: "8px 12px",
+          fontSize: "16px",
+          cursor: "pointer",
+          backgroundColor: "#007BFF",
+          color: "#fff",
+          border: "none",
+          borderRadius: "4px",
+        }}
+      >
+        Поиск
+      </button>
       {loading ? (
-        <p>Загрузка...</p> 
-      ) : (
-        <ul>
-          {results.length > 0 ? (
-            results.map((item, index) => <li key={index}>{item}</li>)
-          ) : query ? (
-            <p>Ничего не найдено</p>
-          ) : null}
-        </ul>
-      )}
+        <p>Загрузка...</p>
+      ) : error ? (
+        <p style={{ color: "red" }}>{error}</p>
+      ) : result ? (
+        <div>
+
+
+
+        </div>
+      ) : null}
     </div>
   );
 }
