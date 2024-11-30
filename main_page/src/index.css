@@ -1,11 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+	font-family: 'MTSTextRegular';
+	src: url('./assets/MTSText-Regular/MTSText-Regular.eot');
+	src:
+	     url('./assets/MTSText-Regular/MTSText-Regular.eot?#iefix') format('embedded-opentype'),
+	     url('./assets/MTSText-Regular/MTSText-Regular.woff2') format('woff2'),
+	     url('./assets/MTSText-Regular/MTSText-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
+
+@font-face {
+	font-family: 'MTSTextBold';
+	src: url('./assets/MTSText-Bold/MTSText-Bold.eot');
+	src:
+	     url('./assets/MTSText-Bold/MTSText-Bold.eot?#iefix') format('embedded-opentype'),
+	     url('./assets/MTSText-Bold/MTSText-Bold.woff2') format('woff2'),
+	     url('./assets/MTSText-Bold/MTSText-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MTSTextBlack';
+	src: url('./assets/MTSText-Black/MTSText-Black.eot');
+	src:
+	     url('./assets/MTSText-Black/MTSText-Black.eot?#iefix') format('embedded-opentype'),
+	     url('./assets/MTSText-Black/MTSText-Black.woff2') format('woff2'),
+	     url('./assets/MTSText-Black/MTSText-Black.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1, h2, h3 {
+  font-family: 'MTSTextBlack';
+}
+
+p {
+  font-family: 'MTSTextRegular';
+}
+
+body {
+	margin: 0;
+	font-family: 
+	  'MTSTextRegular', 
+	  -apple-system, 
+	  BlinkMacSystemFont, 
+	  'Segoe UI', 
+	  'Roboto', 
+	  'Oxygen', 
+	  'Ubuntu', 
+	  'Cantarell', 
+	  'Fira Sans', 
+	  'Droid Sans', 
+	  'Helvetica Neue', 
+	  sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
