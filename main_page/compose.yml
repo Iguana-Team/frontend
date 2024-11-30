@@ -7,8 +7,10 @@ services:
     container_name: iguana-frontend
     ports:
       - 80:80
+    networks:
+      - front
     # env_file:
     #   - .env
 
-volumes:
-  dbdata:
+networks:
+  front:
