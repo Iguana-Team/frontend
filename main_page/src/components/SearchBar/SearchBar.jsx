@@ -16,6 +16,11 @@ function SearchBar() {
             return;
         }
 
+        if (query.trim().length < 2) {
+            setResult([]);
+            return;
+        }
+
         setLoading(true);
         setError(null);
 
@@ -35,6 +40,7 @@ function SearchBar() {
 
     const handleInputChange = (e) => {
         setQuery(e.target.value);
+        fetchData();
     };
 
     const handleKeyDown = (e) => {
@@ -60,20 +66,6 @@ function SearchBar() {
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
             />
-            <button
-                onClick={fetchData}
-                style={{
-                    padding: "8px 12px",
-                    fontSize: "16px",
-                    cursor: "pointer",
-                    backgroundColor: "#007BFF",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "4px",
-                }}
-            >
-                Поиск
-            </button>
             {loading ? (
                 <p>Загрузка...</p>
             ) : error ? (
@@ -102,7 +94,9 @@ function SearchBar() {
                         </div>
                     ))}
                 </div>
-            ) : null}
+            ) : (
+                query.trim() && <p>Ничего не найдено</p>
+            )}
         </div>
     );
 }
