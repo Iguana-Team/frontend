@@ -10,7 +10,7 @@ h1 {
     color: red;
 }
 
-img {
+.profile_picture {
     border-radius: 50%;
     max-width: 70px;
 }
