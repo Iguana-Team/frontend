@@ -88,7 +88,7 @@ function SearchBar() {
                             </div>
                             {openedEmployeeId === employee.id && (
                                 <div className="employee-card-container">
-                                    <EmployeeCard employee={employee}/> {/* Карточка сотрудника */}
+                                    <EmployeeCard employee={employee}/> {}
                                 </div>
                             )}
                         </div>
