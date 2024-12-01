@@ -9,9 +9,9 @@
 .footer-content {
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 3px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
 .footer-column {
@@ -21,11 +21,11 @@
 }
 
 .footer-column.left {
-  text-align: left; 
+  text-align:end; 
 }
 
 .footer-column.right {
-  text-align: right; 
+  text-align: start; 
 }
 
 .footer-center {
@@ -44,18 +44,6 @@
   margin: 5px 0;
 }
 
-.footer-logo img#itmo {
-  width: 35%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer-logo object#polytech {
-  width: 42.5%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .footer-nav {
   margin-top: 10px;
 }
@@ -69,6 +57,11 @@
 
 .footer-link:hover {
   text-decoration: underline;
+}
+
+.copyright {
+  margin: auto;
+  margin-bottom: 3px;
 }
 
 @media (max-width: 768px) {

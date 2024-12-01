@@ -1,32 +1,20 @@
 .header {
     display: flex;
-    justify-content: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 70px;
+    justify-content: space-between;
+}
+
+h1 {
+    color: red;
 }
 
 img {
-    width: 125px
+    border-radius: 50%;
+    max-width: 70px;
 }
 
 object {
-    width: 12%;
+    max-width: 150px;
   }
-
-@media (max-width: 768px) {
-    .header object {
-        width: 20%;
-    }
-
-    .header img {
-        width: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header object {
-        width: 25%;
-    }
-
-    .header img {
-        width: 80px;
-    }
-}
