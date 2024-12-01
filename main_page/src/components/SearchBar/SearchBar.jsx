@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import EmployeeCard from "../Employee/EmployeeCard";
 import './SearchBar.css';
 
@@ -8,24 +8,33 @@ function SearchBar() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [openedEmployeeId, setOpenedEmployeeId] = useState(null);
+    const [debouncedQuery, setDebouncedQuery] = useState(query);
 
-    const fetchData = async () => {
-        if (query.trim() === "") {
-            setError("Введите имя для поиска");
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedQuery(query);
+        }, 300);
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [query]);
+
+    useEffect(() => {
+        if (debouncedQuery.trim().length >= 2) {
+            fetchData(debouncedQuery);
+        } else {
             setResult([]);
-            return;
+            setError(null);
         }
+    }, [debouncedQuery]);
 
-        if (query.trim().length < 2) {
-            setResult([]);
-            return;
-        }
-
+    const fetchData = async (searchQuery) => {
         setLoading(true);
         setError(null);
 
         try {
-            const response = await fetch(`http://localhost:3000/employees?firstName=${query}`);
+            const response = await fetch(`http://localhost:3000/employees?firstName=${searchQuery}`);
             if (!response.ok) {
                 throw new Error("Не удалось получить данные");
             }
@@ -40,13 +49,6 @@ function SearchBar() {
 
     const handleInputChange = (e) => {
         setQuery(e.target.value);
-        fetchData();
-    };
-
-    const handleKeyDown = (e) => {
-        if (e.key === "Enter") {
-            fetchData();
-        }
     };
 
     const handleEmployeeClick = (id) => {
@@ -64,7 +66,6 @@ function SearchBar() {
                 placeholder="Введите имя..."
                 value={query}
                 onChange={handleInputChange}
-                onKeyDown={handleKeyDown}
             />
             {loading ? (
                 <p>Загрузка...</p>
@@ -88,7 +89,7 @@ function SearchBar() {
                             </div>
                             {openedEmployeeId === employee.id && (
                                 <div className="employee-card-container">
-                                    <EmployeeCard employee={employee}/> {}
+                                    <EmployeeCard employee={employee} />
                                 </div>
                             )}
                         </div>
