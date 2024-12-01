@@ -9,9 +9,8 @@ function LoginPage({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Простая проверка (замените на запрос к серверу для реальной проверки)
     if (username === "" && password === "") {
-      onLogin(); // Вызываем функцию из пропсов для авторизации
+      onLogin();
     } else {
       setError("Неверное имя пользователя или пароль");
     }
