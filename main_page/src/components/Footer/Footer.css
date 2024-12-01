@@ -1,37 +1,25 @@
 .footer {
   background-color: #f8f8f8;
-  padding: 1px 0;
+  padding: 20px;
   font-size: 14px;
   color: #555;
   border-top: 1px solid #ddd;
+  text-align: center;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: auto;
-  margin-bottom: 3px;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .footer-column {
   flex: 1;
+  min-width: 200px;
+  padding: 10px;
   text-align: center;
-  padding: 0 10px;
-}
-
-.footer-column.left {
-  text-align:end; 
-}
-
-.footer-column.right {
-  text-align: start; 
-}
-
-.footer-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer-list {
@@ -60,8 +48,7 @@
 }
 
 .copyright {
-  margin: auto;
-  margin-bottom: 3px;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -70,37 +57,12 @@
     text-align: center;
   }
 
-  .footer-column {
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .footer-logo img#itmo {
-    width: 50%;
-  }
-
-  .footer-logo object#polytech {
-    width: 50%;
-  }
-
-  .footer-nav {
-    margin-top: 20px;
-  }
-
   .footer-link {
     font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .footer-logo img#itmo {
-    width: 40%;
-  }
-
-  .footer-logo object#polytech {
-    width: 40%;
-  }
-
   .footer-link {
     font-size: 10px;
   }

@@ -17,4 +17,21 @@ h1 {
 
 object {
     max-width: 150px;
-  }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .profile_picture {
+        max-width: 50px;
+    }
+}
