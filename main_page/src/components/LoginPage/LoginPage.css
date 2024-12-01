@@ -1,44 +1,37 @@
-/* Базовые стили для страницы входа */
 .login-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
   }
   
-  /* Форма входа */
   .login-form {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #E30611;
     width: 100%;
     max-width: 400px;
     text-align: center;
   }
   
-  /* Заголовок формы */
   .login-form h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: #333;
+    color: #E30611;
   }
   
-  /* Сообщение об ошибке */
   .error-message {
     color: red;
     margin-bottom: 15px;
     font-size: 14px;
   }
   
-  /* Группы полей */
   .form-group {
     margin-bottom: 15px;
     text-align: left;
   }
-  
-  /* Метки (label) */
+
   .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -46,7 +39,6 @@
     color: #555;
   }
   
-  /* Поля ввода */
   .form-group input {
     width: 100%;
     padding: 10px;
@@ -56,16 +48,14 @@
     color: #333;
   }
   
-  /* Поля ввода (фокус) */
   .form-group input:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: #E30611;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
   }
   
-  /* Кнопка входа */
   .login-button {
-    background-color: #007bff;
+    background-color: #E30611;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -76,6 +66,6 @@
   }
   
   .login-button:hover {
-    background-color: #0056b3;
+    background-color: #E30611;
   }
   

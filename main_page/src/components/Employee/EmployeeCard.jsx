@@ -15,7 +15,6 @@ function EmployeeCard({ employee }) {
     return (
         <div className="employee-card">
             <div className="employee-info-columns">
-
                 <div className="employee-column">
                     <div className="employee-card-photo">
                         <img

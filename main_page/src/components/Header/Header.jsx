@@ -8,7 +8,7 @@ function Header({ onLogout }) {
                 <img className='profile_picture' src='/img/portrait/portrait.webp' alt='profile picture'/>
             </div>
             <div>
-                <h1>Поиск коллеги</h1>
+                <h1>Поиск коллег</h1>
             </div>
         </div>
     );
