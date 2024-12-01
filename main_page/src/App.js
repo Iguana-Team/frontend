@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import Header from "./components/Header/Header.jsx";
 import SearchBar from "./components/SearchBar/SearchBar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import EmployeePage from "./components/Employee/EmployeePage";
 import LoginPage from "./components/LoginPage/LoginPage";
 import "./App.css";
 
@@ -33,7 +32,6 @@ function App() {
             ) : (
               <>
                 <Route path="/" element={<SearchBar />} />
-                <Route path="/employee/:id" element={<EmployeePage />} />
                 <Route path="*" element={<Navigate to="/" />} />
               </>
             )}

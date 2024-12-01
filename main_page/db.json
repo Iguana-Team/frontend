@@ -37,7 +37,7 @@
     {
       "id": 3,
       "firstName": "Мария",
-      "lastName": "Соскова",
+      "lastName": "Сосискова",
       "photo": "https://via.placeholder.com/150",
       "department1": "Маркетинг",
       "functionalBlock": "Блок 52",
@@ -49,12 +49,12 @@
       "phone": "+7 987 654 3210",
       "city": "Москва",
       "address": "Красная площадь, д. 1",
-      "email": "soskova@example.com"
+      "email": "sosiskova@example.com"
     },
     {
       "id": 4,
       "firstName": "Мария",
-      "lastName": "Вагинкова",
+      "lastName": "Вареникова",
       "photo": "https://via.placeholder.com/150",
       "department1": "Маркетинг",
       "functionalBlock": "Блок 52",
@@ -66,12 +66,12 @@
       "phone": "+7 987 654 3210",
       "city": "Москва",
       "address": "Красная площадь, д. 1",
-      "email": "soskova@example.com"
+      "email": "varenikova@example.com"
     },
     {
       "id": 5,
       "firstName": "Мария",
-      "lastName": "Спойлеровна",
+      "lastName": "Спойлерова",
       "photo": "https://via.placeholder.com/150",
       "department1": "Маркетинг",
       "functionalBlock": "Блок 52",
@@ -83,7 +83,7 @@
       "phone": "",
       "city": "",
       "address": "Красная площадь, д. 1",
-      "email": "soskova@example.com"
+      "email": "spoilerova@example.com"
     }
   ]
 }
