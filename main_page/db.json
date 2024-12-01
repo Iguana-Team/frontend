@@ -67,6 +67,23 @@
       "city": "Москва",
       "address": "Красная площадь, д. 1",
       "email": "soskova@example.com"
+    },
+    {
+      "id": 5,
+      "firstName": "Мария",
+      "lastName": "",
+      "photo": "https://via.placeholder.com/150",
+      "department1": "Маркетинг",
+      "functionalBlock": "Блок 52",
+      "department2": "Отдел 1",
+      "department3": "Отдел 4",
+      "department4": "",
+      "position": "Менеджер",
+      "role": "Управление проектами",
+      "phone": "",
+      "city": "",
+      "address": "Красная площадь, д. 1",
+      "email": "soskova@example.com"
     }
   ]
 }
