@@ -1,11 +1,11 @@
 import './Header.css'
 
-function Header() {
+function Header({ onLogout }) {
     return (
         <div>
             <div className="header">
                 <object data="/img/logo/MTS_logo.svg" type="image/svg+xml" alt="MTS logo"/>
-                <img src='/img/portrait/portrait.jpg' alt='profile picture'/>
+                <img className='profile_picture' src='/img/portrait/portrait.webp' alt='profile picture'/>
             </div>
             <div>
                 <h1>Поиск коллеги</h1>
